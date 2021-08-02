@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:wght@400;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 1340px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  width: 100%;
+  padding: 20px 0;
+  position: relative;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 100px;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: black;
+  font-size: 35px;
+}
+
+.left-black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 30%;
+  background-color: black;
+  z-index: -1;
+}
+
+.hero-section {
+  min-height: calc(90vh - 102px);
+  display: flex;
+  align-items: center;
+}
+
+.hero-parent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-left {
+  width: 50%;
+}
+.video-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/hero-image.jpg") center center/cover no-repeat;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+}
+
+.video-overlay i {
+  color: white;
+  border: 5px solid white;
+  font-size: 60px;
+  /* line-height: 0; */
+  width: 120px;
+  height: 120px;
+  padding: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.video-overlay a {
+  text-decoration: none;
+}
+
+.video-overlay i:hover {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hero-right {
+  width: 50%;
+  padding: 10px 60px;
+}
+
+.hero-right h1 {
+  font-size: 6.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.hero-right p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  text-transform: uppercase;
+  animation-delay: 0.3s;
+}
+
+.btn-outline-dark {
+  border: 3px solid black;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+  display: inline-block;
+  transition: background 0.3s ease-in;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.btn-outline-dark:hover {
+  background: black;
+  color: white;
+}
+
+.btn-dark {
+  border: 3px solid white;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+  display: inline-block;
+  transition: background 0.3s ease-in;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.btn-dark:hover {
+  background: white;
+  color: black;
+}
+
+#contactbtn {
+  animation-delay: 0.5s;
+}
+
+.contact {
+  background: white;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 3rem 0;
+  display: none;
+  color: black;
+}
+
+.contact.active {
+  display: block;
+  left: 0;
+}
+
+.contact .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact .container div {
+  padding: 10px 40px;
+}
+
+.contact a {
+  color: black;
+  display: block;
+  text-decoration: none;
+  margin: 4px 0;
+}
+
+#conClose {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.videoIframe {
+  max-width: 900px;
+  width: 95%;
+  height: 500px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.showrell {
+  padding: 4rem 0;
+  min-height: 100vh;
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+.showrell h1 {
+  font-size: 5.5rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1200px) {
+  .hero-right h1,
+  .showrell h1 {
+    font-size: 4rem;
+  }
+  .hero-right p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 991px) {
+  body {
+    background: black;
+    color: white;
+  }
+  .hero-parent {
+    flex-direction: column;
+  }
+  .hero-left,
+  .hero-right {
+    width: 100%;
+    padding: 20px 0;
+  }
+  nav ul li a {
+    color: white;
+    font-size: 1.5rem;
+  }
+  .btn-outline-dark {
+    border: 3px solid #fff;
+    color: #fff;
+    font-size: 16px;
+  }
+  .videoIframe {
+    height: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-right h1,
+  .showrell h1 {
+    font-size: 2.5rem;
+  }
+  .video-overlay {
+    height: 220px;
+  }
+  .video-overlay i {
+    font-size: 35px;
+    width: 90px;
+    height: 90px;
+  }
+  .contact .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .videoIframe {
+    height: 350px;
+  }
+}
